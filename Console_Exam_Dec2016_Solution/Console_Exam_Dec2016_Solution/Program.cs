@@ -104,13 +104,12 @@ namespace Console_Exam_Dec2016_Solution
                                 Console.Write("\nPlease enter an initial: ");
                                 // Get user input
                                 user_input = Console.ReadLine();
-                                // Validate user input (should be a single uppercase alphanumeric char)
-                                if(user_input.Length == 1 && Helpers.validate_string(user_input, Helpers.LETTER_CHARS))
+                                // Validate user input (initial should be a single uppercase letter)
+                                if(user_input.Length == 1 && Helpers.validate_string(user_input, Helpers.LETTER_CHARS.ToUpper(), true))
                                 {
-                                    user_input = user_input.ToUpper();  // Convert input to uppercase, so initial gets stored as a capital letter
-                                    // SMITHY'S TOP TIP: String objects support accessing chars like an array, as they are basically an array of chars underneath. In this case, index 0 contains the first (and only) char
-                                    user_data.initial = user_input[0];
-                                    add_user_state = add_user_states_t.surname;     // Move to next add user state
+                                    // 'user_input' may indeed contain a single character, but it is still a string datatype. Needs converting
+                                    user_data.initial = user_input.ToCharArray()[0];    // Convert 'user_input' string to char array, then grab the first char (index 0)
+                                    add_user_state = add_user_states_t.surname;         // Move to next add user state
                                 }
                                 else
                                 {
@@ -121,7 +120,8 @@ namespace Console_Exam_Dec2016_Solution
                                 Console.Write("\nPlease enter a surname: ");
                                 // Get user input
                                 user_input = Console.ReadLine();
-                                // Validate user input (length > 1 and only alphabet chars)
+                                // Validate user input
+                                // length > 1 and only letters, case insensitive (see validate_string() param 3)
                                 if(user_input.Length > 1 && Helpers.validate_string(user_input, Helpers.LETTER_CHARS))
                                 {
                                     user_data.surname = user_input;
@@ -137,10 +137,11 @@ namespace Console_Exam_Dec2016_Solution
                                 // Get user input
                                 user_input = Console.ReadLine();
                                 // Validate user input (length > 1 and only numeric chars)
+                                // You could also use int.TryParse() to handle signing & truncate decimal values
                                 if (user_input.Length > 1 && Helpers.validate_string(user_input, Helpers.DIGIT_CHARS))
                                 {
-                                    user_data.age = Convert.ToInt32(user_input);    // Cast 'user_input' string to int. We know this will succeed without throwing an exception, as we've already validated the string contains only numbers
-                                    add_user_state = add_user_states_t.weight;         // Move to next section
+                                    user_data.age = Convert.ToInt32(user_input);    // Directly cast 'user_input' string to int. We know this will succeed as we've already validated the string contains only numbers
+                                    add_user_state = add_user_states_t.weight;      // Move to next section
                                 }
                                 else
                                 {
@@ -151,8 +152,8 @@ namespace Console_Exam_Dec2016_Solution
                                 Console.Write("\nPlease enter a weight in whole kilograms: ");  // You could be a little more adventurous here and allow users to supply a unit e.g. 100kg, 100lb, but for now this will suffice
                                 // Get user input
                                 user_input = Console.ReadLine();
-                                // Validate user input (length > 1 and only numeric chars)
-                                if (user_input.Length > 1 && Helpers.validate_string(user_input, Helpers.DIGIT_CHARS))
+                                // Validate user input (length > 0 and only numeric chars)
+                                if (user_input.Length > 0 && Helpers.validate_string(user_input, Helpers.DIGIT_CHARS))
                                 {
                                     user_data.weight = Convert.ToInt32(user_input);     // Cast 'user_input' string to int. We know this will succeed without throwing an exception, as we've already validated the string contains only numbers
                                     add_user_state = add_user_states_t.finished;        // Move to finish state
