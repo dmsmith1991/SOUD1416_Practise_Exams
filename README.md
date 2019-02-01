@@ -1,11 +1,14 @@
 # SOUD1416 Practise Exams
 
-As you guys are probably aware, in programming there are multiple ways to achieve the same outcome. The provided solutions are just my personal take on how to complete the given practise tasks, with the odd silly addition to keep boredom at bay (let's face it, these programs are pretty pointless).
+As you guys are probably aware, in programming there are multiple ways to achieve the same outcome.
+My aim with these solutions is to communicate a variety of different approaches / C# language features, so take from them what you wish.
+Each solution is well commented to aid the understanding of each code section.
 
-My aim is to communicate a variety of different approaches / C# language features, so take from them what you wish.
-Each solution is well commented to aid the understanding of each line.
+You'll find the odd silly addition, which was my attempt at staying awake throughout :) Let's face it, these programs are quite pointless! (no offence Andy)
 
-Hope this helps, and good luck with the rest of the module!
+Just message me if you have any questions.
+
+Hope these help, and good luck with the rest of the module!
 
 Cheers,
 D
