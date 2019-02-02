@@ -13,7 +13,6 @@ namespace Console_Exam_Practise_Feb2019_Solution
 
         // String constants
         public const string LETTERS = "abcdefghijklmnopqrstuvwxyz"; //As this string is for use with the below ValidateString() function, lets keep it within the same class
-        public const char SPACE = ' ';
 
         // Function for validating the contents of a string
         // input_str : string to test

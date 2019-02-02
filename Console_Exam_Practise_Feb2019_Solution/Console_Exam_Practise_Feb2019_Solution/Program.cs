@@ -61,7 +61,7 @@ namespace Console_Exam_Practise_Feb2019_Solution
                             Console.Write("\nPlease enter the customer name: ");
                             user_input = Console.ReadLine();    // We can safely reuse user_input, as we have finished with its previous value. For begineers it's not a bad idea to declare new variables to avoid confusion
                             // Validate user input. Names should only contain letters (case-insensitive, default parameter), spaces and hiphens
-                            if (HelperFunctions.ValidateString(user_input, HelperFunctions.LETTERS + HelperFunctions.SPACE + "-"))
+                            if (HelperFunctions.ValidateString(user_input, HelperFunctions.LETTERS + " -"))
                             {
                                 // Fancy feature: ensure the name is stored capitalised. This isn't a requirement of the brief, just a nice to have
                                 // Review HelperFunctions -> CapitaliseString() if you'd like to see how this works
