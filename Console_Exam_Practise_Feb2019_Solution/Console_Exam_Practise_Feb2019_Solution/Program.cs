@@ -60,7 +60,7 @@ namespace Console_Exam_Practise_Feb2019_Solution
                             // Get name from user
                             Console.Write("\nPlease enter the customer name: ");
                             user_input = Console.ReadLine();    // We can safely reuse user_input, as we have finished with its previous value. For begineers it's not a bad idea to declare new variables to avoid confusion
-                            // Validate user input. Names should only contain letters (case-insensitive) and spaces
+                            // Validate user input. Names should only contain letters (case-insensitive, default parameter), spaces and hiphens
                             if (HelperFunctions.ValidateString(user_input, HelperFunctions.LETTERS + HelperFunctions.SPACE + "-"))
                             {
                                 // Fancy feature: ensure the name is stored capitalised. This isn't a requirement of the brief, just a nice to have
@@ -97,9 +97,9 @@ namespace Console_Exam_Practise_Feb2019_Solution
                         // Using a for loop instead of for each, as this allows us to output the customer name position also (nice to have)
                         for (int i = 0; i < customer_names.Count; i++)
                         {
-                            // Using a string formatter, which is neater than multiple string concatenations ("" + "" + "" etc.)
-                            // Values stored within Lists (in this case, customer_name) can be accessed just like an array (square brackets)
-                            Console.WriteLine(string.Format("Customer #{0}: {1}", i + 1, customer_names[i]));
+                            // Values stored within List objects (in this case, customer_name) can be accessed just like an array (square brackets)
+                            // WriteLine() supports string formatting (just like with string.Format()). This saves us from having to perform multiple concatenations e.g. "123" + "456" + "789"
+                            Console.WriteLine("Customer #{0}: {1}", i + 1, customer_names[i]);
                         }
                         /* END OF SHOW EXISTING CUSTOMERS CODE BLOCK */
                         break;  // this breaks out of the switch-case, NOT the while loop
