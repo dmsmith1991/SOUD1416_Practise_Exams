@@ -3,7 +3,7 @@
 What's covered...
 * Menu implementation using a finite state machine (https://brilliant.org/wiki/finite-state-machines), consisting of while loops & switch-case statements (as you've probably been using).
   * See "state_diagram.jpg" which shows the different program states and what conditions cause them to transition.
-  * This diagram makes for a handy graphical reference for what you're trying to achieve, so it's well worth drawing out a quick diagram before starting to code.
+  * Sketching out a quick state diagram, with maybe some simple flow charts for the specifics of each state, is a good way of ensuring you don't get into a pickle. The time you'll potentially lose in the exam by going off on a tangent more than makes up for the initial 10 mins drawing a few sketches.
 * Example of how to split code across multiple classes (HelperFunctions class).
 * Validation of user-supplied console input (see HelperFunctions -> ValidateString())
 * Safely parsing integers from strings, without using try-catch or string validation (see RunCalculator(), line 184)
