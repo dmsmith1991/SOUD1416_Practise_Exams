@@ -1,7 +1,7 @@
 # Console_Exam_Practise_Feb2019_Solution
 
 What's covered...
-* Menu implementation using a finite state machine, consisting of while loops & switch-case statements (as you've probably been using).
+* Menu implementation using a finite state machine (https://brilliant.org/wiki/finite-state-machines), consisting of while loops & switch-case statements (as you've probably been using).
   * See "state_diagram.jpg" which shows the different program states and under what conditions they are transitioned between.
   * This diagram makes for a handy graphical reference for what you're trying to achieve, so it's well worth drawing out a quick diagram before starting to code.
 * Example of how to split code across multiple classes (HelperFunctions class).
