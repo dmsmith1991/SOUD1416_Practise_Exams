@@ -1,4 +1,4 @@
-# SOUD1416 Practise Exams
+# SOUD1416 (Programming Concepts) Practise Exams
 
 As you guys are probably aware, in programming there are multiple ways to achieve the same outcome.
 My aim with these solutions is to communicate a variety of different approaches / C# language features, so take from them what you wish.
