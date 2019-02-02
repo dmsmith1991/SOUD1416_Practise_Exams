@@ -7,7 +7,7 @@ Each solution is well commented to aid the understanding of each part of the cod
 *Worth Mentioning*
 * I don't personally use the "camel case" naming convention, so you won't see this throughout.
 * You'll find the odd silly addition, which was my attempt at staying awake throughout :) Let's face it, these programs are quite pointless! (no offence Andy)
-* See the readme for each solution for notes.
+* See each solution's readme for notes.
 
 Feel free to message me if you have any questions.
 
