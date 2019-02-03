@@ -69,13 +69,9 @@ namespace ConsoleMenuClassExample
             // Add each supplied option string, each time checking that they don't already exist
             foreach(string str in option_strs)  // Using a foreach to iterate through each value, as we just need a copy of the value to add
             {
-                if(!menu_options.Contains(str)) // Check if the value doesn't exist before adding
+                if(!AddOption(str)) // We already have a method within this class for adding a single option value, so lets just use that
                 {
-                    menu_options.Add(str);  // Add the current option string
-                }
-                else
-                {
-                    return false;   // Encountered an option string that already exists, therefore return false
+                    return false;   // AddOption() indicated option already exists (returned false), so return false
                 }
             }
 
