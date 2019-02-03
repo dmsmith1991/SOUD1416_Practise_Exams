@@ -48,16 +48,19 @@ namespace ConsoleMenuClassExample
                 Console.WriteLine("\n[Main] User didn't specify a favourite meal");
             }
 
-            // Bonus menu (sorry Ryan :))
+            // Bonus menu (sorry Ryan, but you did break me with your alcoholic concoction :))
             BonusQuestionBanner();
             // Urghhh... I'm just going to ommit the comments. I'm sure you all get the idea by now
             ConsoleMenu ryan_menu = new ConsoleMenu();
             ryan_menu.PromptText = "Why does our classmate Ryan W. have the nickname 'Charlie'?";
             ryan_menu.AddOption("His favourite comedian is Charlie Chaplin");
+            ryan_menu.AddOption("He was born a girl named Charlotte");
             ryan_menu.AddOption("His dog named Charlie woke him up one morning by licking his private parts");
             ryan_menu.AddOption("His favourite YouTube video is 'Charlie Bit My Finger!'");
+            ryan_menu.AddOption("He wishes his parents named him Charlie");
+
             string answer = ryan_menu.Run();
-            if(answer.Contains("private parts"))
+            if(answer.Contains(Encoding.UTF8.GetString(Convert.FromBase64String("cHJpdmF0ZSBwYXJ0cw=="))))  // No cheating :)
             {
                 Console.WriteLine("\n[Main] That is the correct answer. Who'd have thought it!");
             }
@@ -76,17 +79,6 @@ namespace ConsoleMenuClassExample
 
         static void BonusQuestionBanner()
         {
-            /*
-            Console.WriteLine(@"<-.(`-')            <-. (`-')_             (`-').->     <-.(`-')              (`-')  _ (`-').->(`-')      _                <-. (`-')_ ");
-            Console.WriteLine(@" __( OO)      .->      \( OO) )     .->    ( OO)_        __( OO)       .->    ( OO).-/ ( OO)_  ( OO).->  (_)         .->      \( OO) )");
-            Console.WriteLine(@"'-'---.\ (`-')----. ,--./ ,--/ ,--.(,--.  (_)--\_)      '-'---\_) ,--.(,--.  (,------.(_)--\_) /    '._  ,-(`-')(`-')----. ,--./ ,--/ ");
-            Console.WriteLine(@"| .-. (/ ( OO).-.  '|   \ |  | |  | |(`-')/    _ /     |  .-.  |  |  | |(`-') |  .---'/    _ / |'--...__)| ( OO)( OO).-.  '|   \ |  | ");
-            Console.WriteLine(@"| '-' `.)( _) | |  ||  . '|  |)|  | |(OO )\_..`--.     |  | | <-' |  | |(OO )(|  '--. \_..`--. `--.  .--'|  |  )( _) | |  ||  . '|  |)");
-            Console.WriteLine(@"| /`'.  | \|  |)|  ||  |\    | |  | | |  \.-._)   \    |  | |  |  |  | | |  \ |  .--' .-._)   \   |  |  (|  |_/  \|  |)|  ||  |\    | ");
-            Console.WriteLine(@"| '--'  /  '  '-'  '|  | \   | \  '-'(_ .'\       /    '  '-'  '-.\  '-'(_ .' |  `---.\       /   |  |   |  |'->  '  '-'  '|  | \   | ");
-            Console.WriteLine(@"`------'    `-----' `--'  `--'  `-----'    `-----'      `-----'--' `-----'    `------' `-----'    `--'   `--'      `-----' `--'  `--' ");
-            */
-
             Console.WriteLine("");
             Console.WriteLine(@" ________  ________  ________   ___  ___  ________           ________  ________  ___  ___  ________   ________     ");
             Console.WriteLine(@"|\   __  \|\   __  \|\   ___  \|\  \|\  \|\   ____\         |\   __  \|\   __  \|\  \|\  \|\   ___  \|\   ___ \    ");
