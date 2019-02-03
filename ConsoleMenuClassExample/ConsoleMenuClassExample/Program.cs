@@ -57,7 +57,7 @@ namespace ConsoleMenuClassExample
             ryan_menu.AddOption("He was born a girl named Charlotte");
             ryan_menu.AddOption("His dog named Charlie woke him up one morning by licking his private parts");
             ryan_menu.AddOption("His favourite YouTube video is 'Charlie Bit My Finger!'");
-            ryan_menu.AddOption("He wishes his parents named him Charlie");
+            ryan_menu.AddOption("Nobody actually knows");
 
             string answer = ryan_menu.Run();
             if(answer.Contains(Encoding.UTF8.GetString(Convert.FromBase64String("cHJpdmF0ZSBwYXJ0cw=="))))  // No cheating :)
