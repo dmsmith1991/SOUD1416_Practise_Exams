@@ -48,12 +48,55 @@ namespace ConsoleMenuClassExample
                 Console.WriteLine("\n[Main] User didn't specify a favourite meal");
             }
 
+            // Bonus menu (sorry Ryan :))
+            BonusQuestionBanner();
+            // Urghhh... I'm just going to ommit the comments. I'm sure you all get the idea by now
+            ConsoleMenu ryan_menu = new ConsoleMenu();
+            ryan_menu.PromptText = "Why does our classmate Ryan W. have the nickname 'Charlie'?";
+            ryan_menu.AddOption("His favourite comedian is Charlie Chaplin");
+            ryan_menu.AddOption("His dog named Charlie woke him up one morning by licking his private parts");
+            ryan_menu.AddOption("His favourite YouTube video is 'Charlie Bit My Finger!'");
+            string answer = ryan_menu.Run();
+            if(answer.Contains("private parts"))
+            {
+                Console.WriteLine("\n[Main] That is the correct answer. Who'd have thought it!");
+            }
+            else
+            {
+                Console.WriteLine("\n[Main] Wrong answer, better luck next time.");
+            }
+
             // See how useful classes can be? :)
             // The ConsoleMenu() class can be easily reused in other projects, by just adding the ConsoleMenu.cs file to the solution!
             // Feel free to review ConsoleMenu()'s contents to see how this all works
 
             Console.WriteLine("\nProgram finished. Press enter to exit...");
             Console.ReadLine();
+        }
+
+        static void BonusQuestionBanner()
+        {
+            /*
+            Console.WriteLine(@"<-.(`-')            <-. (`-')_             (`-').->     <-.(`-')              (`-')  _ (`-').->(`-')      _                <-. (`-')_ ");
+            Console.WriteLine(@" __( OO)      .->      \( OO) )     .->    ( OO)_        __( OO)       .->    ( OO).-/ ( OO)_  ( OO).->  (_)         .->      \( OO) )");
+            Console.WriteLine(@"'-'---.\ (`-')----. ,--./ ,--/ ,--.(,--.  (_)--\_)      '-'---\_) ,--.(,--.  (,------.(_)--\_) /    '._  ,-(`-')(`-')----. ,--./ ,--/ ");
+            Console.WriteLine(@"| .-. (/ ( OO).-.  '|   \ |  | |  | |(`-')/    _ /     |  .-.  |  |  | |(`-') |  .---'/    _ / |'--...__)| ( OO)( OO).-.  '|   \ |  | ");
+            Console.WriteLine(@"| '-' `.)( _) | |  ||  . '|  |)|  | |(OO )\_..`--.     |  | | <-' |  | |(OO )(|  '--. \_..`--. `--.  .--'|  |  )( _) | |  ||  . '|  |)");
+            Console.WriteLine(@"| /`'.  | \|  |)|  ||  |\    | |  | | |  \.-._)   \    |  | |  |  |  | | |  \ |  .--' .-._)   \   |  |  (|  |_/  \|  |)|  ||  |\    | ");
+            Console.WriteLine(@"| '--'  /  '  '-'  '|  | \   | \  '-'(_ .'\       /    '  '-'  '-.\  '-'(_ .' |  `---.\       /   |  |   |  |'->  '  '-'  '|  | \   | ");
+            Console.WriteLine(@"`------'    `-----' `--'  `--'  `-----'    `-----'      `-----'--' `-----'    `------' `-----'    `--'   `--'      `-----' `--'  `--' ");
+            */
+
+            Console.WriteLine("");
+            Console.WriteLine(@" ________  ________  ________   ___  ___  ________           ________  ________  ___  ___  ________   ________     ");
+            Console.WriteLine(@"|\   __  \|\   __  \|\   ___  \|\  \|\  \|\   ____\         |\   __  \|\   __  \|\  \|\  \|\   ___  \|\   ___ \    ");
+            Console.WriteLine(@"\ \  \|\ /\ \  \|\  \ \  \\ \  \ \  \\\  \ \  \___|_        \ \  \|\  \ \  \|\  \ \  \\\  \ \  \\ \  \ \  \_|\ \   ");
+            Console.WriteLine(@" \ \   __  \ \  \\\  \ \  \\ \  \ \  \\\  \ \_____  \        \ \   _  _\ \  \\\  \ \  \\\  \ \  \\ \  \ \  \ \\ \  ");
+            Console.WriteLine(@"  \ \  \|\  \ \  \\\  \ \  \\ \  \ \  \\\  \|____|\  \        \ \  \\  \\ \  \\\  \ \  \\\  \ \  \\ \  \ \  \_\\ \ ");
+            Console.WriteLine(@"   \ \_______\ \_______\ \__\\ \__\ \_______\____\_\  \        \ \__\\ _\\ \_______\ \_______\ \__\\ \__\ \_______\");
+            Console.WriteLine(@"    \|_______|\|_______|\|__| \|__|\|_______|\_________\        \|__|\|__|\|_______|\|_______|\|__| \|__|\|_______|");
+            Console.WriteLine(@"                                            \|_________|                                                           ");
+            Console.WriteLine("");
         }
     }
 }
